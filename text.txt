@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+#main {
+  background-color: blue;
+  width: 100%;
+  height: 100vh; /* Modifiquei para ocupar 100% da altura da viewport */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os filhos */
+  justify-content: center; /* Centraliza horizontalmente os filhos */
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 8px;
+  height: 100%; /* Alterei para ocupar 100% da altura do #main */
+}

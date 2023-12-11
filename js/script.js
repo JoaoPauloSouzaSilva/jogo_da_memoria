@@ -2,6 +2,7 @@ const cards = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'A', 'B', 'C', 'D', 'E', 
 let flippedCards = [];
 let matchedCards = [];
 let moves = 0;
+let playerName;
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -20,24 +21,20 @@ function createCard(letter, index) {
     const card = document.createElement('div');
     card.classList.add('card');
     card.dataset.index = index;
-    card.innerHTML = letter;
+    const cardValue = document.createElement('span');
+    cardValue.classList.add('card-value');
+    cardValue.innerText = '?';
+    card.appendChild(cardValue);
     card.addEventListener('click', flipCard);
     return card;
-}
-
-function createBoard() {
-    const gameContainer = document.getElementById('game-container');
-    const shuffledCards = shuffle(cards);
-
-    shuffledCards.forEach((letter, index) => {
-        const card = createCard(letter, index);
-        gameContainer.appendChild(card);
-    });
 }
 
 function flipCard() {
     if (flippedCards.length < 2 && !flippedCards.includes(this) && !matchedCards.includes(this)) {
         this.classList.add('flipped');
+
+        const cardValue = this.querySelector('.card-value');
+        cardValue.innerText = cards[this.dataset.index];
 
         flippedCards.push(this);
 
@@ -55,12 +52,7 @@ function checkMatch() {
     if (cards[index1] === cards[index2]) {
         card1.classList.add('matched');
         card2.classList.add('matched');
-
         matchedCards.push(card1, card2);
-
-        if (matchedCards.length === cards.length) {
-            endGame();
-        }
     } else {
         card1.classList.add('not-matched');
         card2.classList.add('not-matched');
@@ -68,15 +60,22 @@ function checkMatch() {
         setTimeout(() => {
             card1.classList.remove('flipped', 'not-matched');
             card2.classList.remove('flipped', 'not-matched');
+            const cardValue1 = card1.querySelector('.card-value');
+            const cardValue2 = card2.querySelector('.card-value');
+            cardValue1.innerText = '?';
+            cardValue2.innerText = '?';
         }, 500);
     }
 
     flippedCards = [];
     moves++;
+
+    if (matchedCards.length === cards.length) {
+        endGame();
+    }
 }
 
 function endGame() {
-    const playerName = prompt('Parabéns! Você completou o jogo. Informe seu nome:');
     alert(`Jogador: ${playerName}\nPontuação: ${moves} movimentos`);
 
     const playAgain = confirm('Deseja jogar novamente?');
@@ -93,4 +92,17 @@ function resetGame() {
     createBoard();
 }
 
-document.addEventListener('DOMContentLoaded', createBoard);
+function createBoard() {
+    const gameContainer = document.getElementById('game-container');
+    const shuffledCards = shuffle(cards);
+
+    shuffledCards.forEach((letter, index) => {
+        const card = createCard(letter, index);
+        gameContainer.appendChild(card);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    playerName = prompt('Informe seu nome:');
+    createBoard();
+});
