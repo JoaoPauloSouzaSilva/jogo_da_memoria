@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Memory Game</title>
+    <title>Jogo da Memória</title>
 </head>
 <body>
-    <div id="main">
-      <div id="game-container"></div>
+    <div id="title">
+      <h1>Jogo da Memória</h1>
     </div>
+    <div id="main">
+        <div id="game-container"></div>
+    </div>
+
+    <!-- Player Name Modal -->
+    <div id="nameModal" class="modal">
+          <div class="modal-content">
+  
+              <p>Informe seu nome:</p>
+              <input type="text" id="playerNameInput" placeholder="Nome">
+              <button onclick="submitName()">Iniciar Jogo</button>
+          </div>
+    </div>
+
+    <!-- Game End Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p id="modal-content"></p>
+            <p>Número de Jogadas: <span id="movesCount"></span></p>
+            <button onclick="playAgain()">Jogar Novamente</button>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>

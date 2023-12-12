@@ -71,17 +71,35 @@ function checkMatch() {
     moves++;
 
     if (matchedCards.length === cards.length) {
-        endGame();
+        showEndGameModal();
     }
 }
 
-function endGame() {
-    alert(`Jogador: ${playerName}\nPontuação: ${moves} movimentos`);
+function showNameModal() {
+    const nameModal = document.getElementById('nameModal');
+    nameModal.style.display = 'block';
+}
 
-    const playAgain = confirm('Deseja jogar novamente?');
-    if (playAgain) {
-        resetGame();
-    }
+function submitName() {
+    playerName = document.getElementById('playerNameInput').value;
+    const nameModal = document.getElementById('nameModal');
+    nameModal.style.display = 'none';
+    createBoard();
+}
+
+function showEndGameModal() {
+    const modal = document.getElementById('myModal');
+    const modalContent = document.getElementById('modal-content');
+    const movesCount = document.getElementById('movesCount');
+    modalContent.innerText = `Jogador: ${playerName}\nParabéns! Você completou o jogo.`;
+    movesCount.innerText = ` ${moves}`;
+    modal.style.display = 'block';
+}
+
+function playAgain() {
+    const modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+    resetGame();
 }
 
 function resetGame() {
@@ -102,7 +120,5 @@ function createBoard() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    playerName = prompt('Informe seu nome:');
-    createBoard();
-});
+// Executa a função para mostrar o modal de nome ao carregar a página
+document.addEventListener('DOMContentLoaded', showNameModal);
