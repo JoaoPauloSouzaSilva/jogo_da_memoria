@@ -3,6 +3,8 @@ let flippedCards = [];
 let matchedCards = [];
 let moves = 0;
 let playerName;
+const maxAttempts = 10;
+let currentAttempts = 0;
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -39,7 +41,19 @@ function flipCard() {
         flippedCards.push(this);
 
         if (flippedCards.length === 2) {
-            setTimeout(checkMatch, 500);
+            currentAttempts++;
+    
+            // Atualize o número de jogadas restantes na tela
+            const remainingMovesElement = document.getElementById('remainingMoves');
+            const remainingMoves = maxAttempts - currentAttempts;
+            remainingMovesElement.innerText = `Jogadas Restantes: ${remainingMoves}`;
+    
+            setTimeout(() => {
+                checkMatch();
+                if (currentAttempts >= maxAttempts) {
+                    showEndGameModal();
+                }
+            }, 500);
         }
     }
 }
@@ -73,26 +87,44 @@ function checkMatch() {
     if (matchedCards.length === cards.length) {
         showEndGameModal();
     }
+
+    if (currentAttempts >= maxAttempts) {
+        showEndGameModal();
+    }
 }
 
 function showNameModal() {
     const nameModal = document.getElementById('nameModal');
     nameModal.style.display = 'block';
+
+    const infoIcon = document.getElementById('infoIcon');
+    infoIcon.addEventListener('click', showInfoModal);
 }
 
 function submitName() {
-    playerName = document.getElementById('playerNameInput').value;
-    const nameModal = document.getElementById('nameModal');
-    nameModal.style.display = 'none';
-    createBoard();
+    const playerNameInput = document.getElementById('playerNameInput');
+    playerName = playerNameInput.value;
+
+    if (playerName.trim() !== "") { // Verifica se o nome não está vazio ou contém apenas espaços em branco
+        const nameModal = document.getElementById('nameModal');
+        nameModal.style.display = 'none';
+        createBoard();
+    } else {
+        alert("Por favor, insira um nome válido antes de começar o jogo.");
+    }
 }
 
 function showEndGameModal() {
     const modal = document.getElementById('myModal');
     const modalContent = document.getElementById('modal-content');
-    const movesCount = document.getElementById('movesCount');
-    modalContent.innerText = `Jogador: ${playerName}\nParabéns! Você completou o jogo.`;
-    movesCount.innerText = ` ${moves}`;
+    const correctMovesCount = matchedCards.length / 2; // Calcula a quantidade de jogadas certas
+
+    if (correctMovesCount === cards.length / 2) {
+        modalContent.innerText = ` ${playerName} \n \n Parabéns! Você completou o jogo. \n \n Você fez ${correctMovesCount} ponto(s) de 10.`;
+    } else {
+        modalContent.innerText = ` ${playerName} \n \n Infelizmente, você não completou o jogo. \n \n Você fez ${correctMovesCount} ponto(s) de 10.`;
+    }
+
     modal.style.display = 'block';
 }
 
@@ -100,6 +132,14 @@ function playAgain() {
     const modal = document.getElementById('myModal');
     modal.style.display = 'none';
     resetGame();
+    currentAttempts = 0;
+    updateRemainingMoves(maxAttempts);
+}
+
+function updateRemainingMoves(remainingMoves) {
+    // Atualiza o número de jogadas restantes na tela
+    const remainingMovesElement = document.getElementById('remainingMoves');
+    remainingMovesElement.innerText = `Jogadas Restantes: ${remainingMoves}`;
 }
 
 function resetGame() {
@@ -118,6 +158,16 @@ function createBoard() {
         const card = createCard(letter, index);
         gameContainer.appendChild(card);
     });
+}
+
+function showInfoModal() {
+    const infoModal = document.getElementById('infoModal');
+    infoModal.style.display = 'block';
+}
+
+function closeInfoModal() {
+    const infoModal = document.getElementById('infoModal');
+    infoModal.style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', showNameModal);

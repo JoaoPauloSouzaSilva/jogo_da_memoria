@@ -9,8 +9,14 @@
 </head>
 <body>
     <div id="title">
-      <h1>Jogo da Memória</h1>
+      <h1> O Jogo da Memória</h1>
+      <h3> Mais Difícil do Mundo <img id="infoIcon" src="images/info.png" alt="Info Icon" title="Informações"></h3>
     </div>
+
+    <div id="remainingMoves">
+        Jogadas Restantes: 10
+    </div>
+
     <div id="main">
         <div id="game-container"></div>
     </div>
@@ -24,10 +30,27 @@
           </div>
     </div>
 
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <div class="centerModalInfo">
+                <h1> Informações </h1>
+            </div>
+
+            <p>
+                A probabilidade de um jogador ganhar em exatamente 10 jogadas em um jogo de memória com 16 cartas é de aproximadamente 0,246%. Isso foi calculado considerando a fórmula de combinação para representar as 8 jogadas corretas e 2 erros em um total de 10 jogadas. Vale ressaltar que essa é uma simplificação que assume escolhas aleatórias, não refletindo completamente o comportamento de um jogador real.
+            </p>
+            
+            <div class="centerModalInfo">
+                <button onclick="closeInfoModal()">Fechar</button>
+            </div>
+
+        </div>
+    </div>
+    
     <div id="myModal" class="modal">
         <div class="modal-content">
             <p id="modal-content"></p>
-            <p>Número de Jogadas: <span id="movesCount"></span></p>
+           
             <button onclick="playAgain()">Jogar Novamente</button>
         </div>
     </div>
