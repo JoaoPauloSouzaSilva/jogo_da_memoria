@@ -120,5 +120,4 @@ function createBoard() {
     });
 }
 
-// Executa a função para mostrar o modal de nome ao carregar a página
 document.addEventListener('DOMContentLoaded', showNameModal);
