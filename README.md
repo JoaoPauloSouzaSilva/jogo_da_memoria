@@ -8,21 +8,34 @@ O Jogo da Memória é um clássico que desafia a concentração e memorização 
 
 A complexidade do jogo é ampliada pela baixa probabilidade de um jogador acertar todas as respostas em 10 tentativas ou menos. Para calcular a probabilidade de um jogador alcançar precisamente 10 acertos em um jogo de memória com 16 cartas, utilizamos a fórmula de combinação. A equação é a seguinte:
 
-![Calculo 1](code/images/calculo-1.png)
+<p align="center">
+  <img src="code/images/calculo-1.png" alt="Calculo 1" width="300"/>
+</p>
 
 Aqui, consideramos que, em 10 jogadas, o jogador encontra 8 pares corretos e comete 2 erros. O termo C(8, 1) representa a escolha de 1 erro em meio às 8 jogadas corretas.
 
-![Calculo 2](code/images/calculo-2.png)
+<p align="center">
+  <img src="code/images/calculo-2.png" alt="Calculo 2" width="600"/>
+</p>
+
 
 Multiplicando por 100 para obter a porcentagem:
 
-![Calculo 3](code/images/calculo-3.png)
+<p align="center">
+  <img src="code/images/calculo-3.png" alt="Calculo 3" width="300"/>
+</p>
+
 
 Portanto, a probabilidade de um jogador ter sucesso em exatamente 10 jogadas em um jogo de memória com 16 cartas é de aproximadamente 0,246%. Vale ressaltar que esta estimativa é uma simplificação, baseada em escolhas aleatórias, e pode não representar completamente o comportamento de um jogador real.
 
 Ao iniciar o jogo, o usuário é solicitado a fornecer seu nome como parte do processo obrigatório para iniciar a partida. Após inserir o nome, a tela do jogo é revelada, apresentando uma disposição de 16 cartas em uma área 4x4.
 
-No canto superior central, ao lado do título, um ícone informativo ( :large_blue_circle: ) fornece acesso a informações detalhadas sobre a dificuldade do jogo, oferecendo aos jogadores uma visão clara do desafio que os aguarda.
+No canto superior central, ao lado do título, um ícone informativo ( 
+  <p align="center">
+  <img src="code/images/info.png" alt="Icone Info" width="80"/>
+</p>
+  
+  ) fornece acesso a informações detalhadas sobre a dificuldade do jogo, oferecendo aos jogadores uma visão clara do desafio que os aguarda.
 
 Logo abaixo do título, um contador regressivo exibe a quantidade de jogadas restantes, proporcionando aos jogadores uma noção precisa das tentativas restantes.
 
@@ -46,38 +59,38 @@ Ao escolher a opção 'Jogar Novamente', as cartas são reembaralhadas, o contad
 Para aprimorar a experiência durante o jogo, é essencial compreender as regras que o regem. A seguir, encontram-se detalhadamente listadas todas as normas a serem observadas:
 
  1. Início do Jogo
-  1. Ao iniciar o jogo, será solicitado que você informe seu nome para personalizar a experiência.
+  1.1 Ao iniciar o jogo, será solicitado que você informe seu nome para personalizar a experiência.
 
-  2. Uma vez inserido o nome, você será direcionado para o tabuleiro do jogo.
+  1.2 Uma vez inserido o nome, você será direcionado para o tabuleiro do jogo.
 
   Obs: O jogo terá início somente após a inserção do nome do jogador.
 
 2. O Tabuleiro
-  1. O tabuleiro consiste em várias cartas viradas para baixo, cada uma contendo um letra.
+  2.1 O tabuleiro consiste em várias cartas viradas para baixo, cada uma contendo um letra.
   
-  2. Cada letra tem um par correspondente no tabuleiro.
+  2.2 Cada letra tem um par correspondente no tabuleiro.
 
 3. Regras
-  1. **Jogadas:** Cada jogada consiste em virar duas cartas.
-  2. **Objetivo:**  Encontrar todas as cartas correspondentes em pares.
-  3. **Limite de Jogadas:** Este jogo tem um desafio especial! Você possui apenas 10 jogadas para completar o tabuleiro.
-  4. **Pontuação:** Cada par correspondente revelado contribui para sua pontuação final.
+  3.1 **Jogadas:** Cada jogada consiste em virar duas cartas.
+  3.2 **Objetivo:**  Encontrar todas as cartas correspondentes em pares.
+  3.3 **Limite de Jogadas:** Este jogo tem um desafio especial! Você possui apenas 10 jogadas para completar o tabuleiro.
+  3.4 **Pontuação:** Cada par correspondente revelado contribui para sua pontuação final.
   
 4. Como Jogar
-  1. **Escolha uma Carta:** Clique em uma carta para virá-la.
-  2. **Memorize:** Memorize os símbolos das cartas viradas.
-  3. **Escolha Outra Carta:** Clique em outra carta para tentar encontrar seu par correspondente.
-  4. **Correspondência:** Se os símbolos coincidirem, as cartas permanecem viradas. Se não, elas são viradas novamente.
-  5. **Número de Jogadas:** Você tem apenas 10 jogadas, então escolha sabiamente!
+  4.1 **Escolha uma Carta:** Clique em uma carta para virá-la.
+  4.2 **Memorize:** Memorize os símbolos das cartas viradas.
+  4.3 **Escolha Outra Carta:** Clique em outra carta para tentar encontrar seu par correspondente.
+  4.4 **Correspondência:** Se os símbolos coincidirem, as cartas permanecem viradas. Se não, elas são viradas novamente.
+  4.5 **Número de Jogadas:** Você tem apenas 10 jogadas, então escolha sabiamente!
 
 5. Fim do Jogo
-  1. O jogo termina quando todos os pares de cartas são encontrados ou quando você atinge o limite de 10 jogadas.
+  5.1 O jogo termina quando todos os pares de cartas são encontrados ou quando você atinge o limite de 10 jogadas.
   
-  2. Uma mensagem final será exibida com seu nome, desempenho e pontuação.
+  5.2 Uma mensagem final será exibida com seu nome, desempenho e pontuação.
 
 6. Reiniciar o Jogo
-  1. Se desejar jogar novamente, clique no botão "Jogar Novamente" no final do jogo.
-  
+  6.1 Se desejar jogar novamente, clique no botão "Jogar Novamente" no final do jogo.
+
 
 
 ## Como executar
