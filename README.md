@@ -9,22 +9,23 @@ O Jogo da Memória é um clássico que desafia a concentração e memorização 
 A complexidade do jogo é ampliada pela baixa probabilidade de um jogador acertar todas as respostas em 10 tentativas ou menos. Para calcular a probabilidade de um jogador alcançar precisamente 10 acertos em um jogo de memória com 16 cartas, utilizamos a fórmula de combinação. A equação é a seguinte:
 
 <p align="center">
-  <img src="code/images/calculo-1.png" alt="Calculo 1" width="400"  style="margin: 0;"/>
+  <img src="code/images/calculo-1.png" alt="Calculo 1" width="400" style="margin: 10px 0;"/>
 </p>
 
 Aqui, consideramos que, em 10 jogadas, o jogador encontra 8 pares corretos e comete 2 erros. O termo C(8, 1) representa a escolha de 1 erro em meio às 8 jogadas corretas.
 
 <p align="center">
-  <img src="code/images/calculo-2.png" alt="Calculo 2" width="500"  style="margin: 0;"/>
+  <img src="code/images/calculo-2.png" alt="Calculo 2" width="500" style="margin: 10px 0;"/>
 </p>
 
 Multiplicando por 100 para obter a porcentagem:
 
-<p align="center";>
-  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400"  style="margin: 0;"/>
+<p align="center">
+  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400" style="margin: 10px 0;"/>
 </p>
 
 Portanto, a probabilidade de um jogador ter sucesso em exatamente 10 jogadas em um jogo de memória com 16 cartas é de aproximadamente 0,246%. Vale ressaltar que esta estimativa é uma simplificação, baseada em escolhas aleatórias, e pode não representar completamente o comportamento de um jogador real.
+
 
 Ao iniciar o jogo, o usuário é solicitado a fornecer seu nome como parte do processo obrigatório para iniciar a partida. Após inserir o nome, a tela do jogo é revelada, apresentando uma disposição de 16 cartas em uma área 4x4.
 
