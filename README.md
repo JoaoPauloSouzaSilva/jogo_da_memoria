@@ -35,6 +35,7 @@ No canto superior central, ao lado do título, um ícone informativo:
 </p>
  fornece acesso a informações detalhadas sobre a dificuldade do jogo, oferecendo aos jogadores uma visão clara do desafio que os aguarda.
 
+
 Logo abaixo do título, um contador regressivo exibe a quantidade de jogadas restantes, proporcionando aos jogadores uma noção precisa das tentativas restantes.
 
 Quanto à disposição e interação com as cartas:
@@ -57,11 +58,11 @@ Ao escolher a opção 'Jogar Novamente', as cartas são reembaralhadas, o contad
 Para aprimorar a experiência durante o jogo, é essencial compreender as regras que o regem. A seguir, encontram-se detalhadamente listadas todas as normas a serem observadas:
 
  1. Início do Jogo
-  1.1 Ao iniciar o jogo, será solicitado que você informe seu nome para personalizar a experiência.
+    1. Ao iniciar o jogo, será solicitado que você informe seu nome para personalizar a experiência.
 
-  1.2 Uma vez inserido o nome, você será direcionado para o tabuleiro do jogo.
+    2. Uma vez inserido o nome, você será direcionado para o tabuleiro do jogo.
 
-  Obs: O jogo terá início somente após a inserção do nome do jogador.
+    Obs: O jogo terá início somente após a inserção do nome do jogador.
 
 2. O Tabuleiro
   2.1 O tabuleiro consiste em várias cartas viradas para baixo, cada uma contendo um letra.
