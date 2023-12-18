@@ -20,9 +20,7 @@ Aqui, consideramos que, em 10 jogadas, o jogador encontra 8 pares corretos e com
 
 Multiplicando por 100 para obter a porcentagem:
 
-<p align="center">
-  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400" style="margin: 10px 0;"/>
-</p>
+  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400" style="margin: 10px 0;"; align="center"/>
 
 Portanto, a probabilidade de um jogador ter sucesso em exatamente 10 jogadas em um jogo de memória com 16 cartas é de aproximadamente 0,246%. Vale ressaltar que esta estimativa é uma simplificação, baseada em escolhas aleatórias, e pode não representar completamente o comportamento de um jogador real.
 
