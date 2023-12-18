@@ -6,7 +6,7 @@
 ## Regras do Jogo
 O Jogo da Memória é um clássico que desafia a concentração e memorização dos participantes. Em sua versão especial, conhecida como "O Mais Difícil do Mundo", propomos um desafio que testará até mesmo os jogadores mais habilidosos. A dinâmica consiste em encontrar todos os pares de cartas idênticas em um conjunto de 16 cartas embaralhadas. O diferencial desafiador do jogo reside na limitação do jogador a apenas 10 movimentos, enquanto há 8 correspondências a serem encontradas. Isso significa que o jogador pode cometer apenas duas falhas durante todo o jogo.
 
-A complexidade do jogo é ampliada pela baixa probabilidade de um jogador acertar todas as respostas em 10 tentativas ou menos. Para calcular a probabilidade de um jogador alcançar precisamente 10 acertos em um jogo de memória com 16 cartas, utilizamos a fórmula de combinação. A equação é a seguinte:
+A complexidade do jogo é ampliada pela baixa probabilidade de um jogador acertar todas as respostas em 10 tentativas ou menos. Para calcular a probabilidade de um jogador alcançar precisamente 10 acertos em um jogo de memória com 16 cartas, utilizamos a fórmula de combinação. A equação é a seguinte
 
 <p align="center">
   <img src="code/images/calculo-1.png" alt="Calculo 1" width="400" style="margin: 10px 0;"/>
@@ -18,9 +18,11 @@ Aqui, consideramos que, em 10 jogadas, o jogador encontra 8 pares corretos e com
   <img src="code/images/calculo-2.png" alt="Calculo 2" width="500" style="margin: 10px 0;"/>
 </p>
 
-Multiplicando por 100 para obter a porcentagem:
+Multiplicando por 100 para obter a porcentagem
 
-  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400" style="margin: 10px 0;"; align="center"/>
+<p align="center">
+  <img src="code/images/calculo-3.png" alt="Calculo 3" width="400" style="margin: 10px 0;"/>
+</p>
 
 Portanto, a probabilidade de um jogador ter sucesso em exatamente 10 jogadas em um jogo de memória com 16 cartas é de aproximadamente 0,246%. Vale ressaltar que esta estimativa é uma simplificação, baseada em escolhas aleatórias, e pode não representar completamente o comportamento de um jogador real.
 
