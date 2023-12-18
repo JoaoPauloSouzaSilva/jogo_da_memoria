@@ -65,30 +65,30 @@ Para aprimorar a experiência durante o jogo, é essencial compreender as regras
     Obs: O jogo terá início somente após a inserção do nome do jogador.
 
 2. O Tabuleiro
-  2.1 O tabuleiro consiste em várias cartas viradas para baixo, cada uma contendo um letra.
+    1. O tabuleiro consiste em várias cartas viradas para baixo, cada uma contendo um letra.
   
-  2.2 Cada letra tem um par correspondente no tabuleiro.
+    2. Cada letra tem um par correspondente no tabuleiro.
 
 3. Regras
-  3.1 **Jogadas:** Cada jogada consiste em virar duas cartas.
-  3.2 **Objetivo:**  Encontrar todas as cartas correspondentes em pares.
-  3.3 **Limite de Jogadas:** Este jogo tem um desafio especial! Você possui apenas 10 jogadas para completar o tabuleiro.
-  3.4 **Pontuação:** Cada par correspondente revelado contribui para sua pontuação final.
+    1. **Jogadas:** Cada jogada consiste em virar duas cartas.
+    2. **Objetivo:**  Encontrar todas as cartas correspondentes em pares.
+    3. **Limite de Jogadas:** Este jogo tem um desafio especial! Você possui apenas 10 jogadas para completar o tabuleiro.
+    4. **Pontuação:** Cada par correspondente revelado contribui para sua pontuação final.
   
 4. Como Jogar
-  4.1 **Escolha uma Carta:** Clique em uma carta para virá-la.
-  4.2 **Memorize:** Memorize os símbolos das cartas viradas.
-  4.3 **Escolha Outra Carta:** Clique em outra carta para tentar encontrar seu par correspondente.
-  4.4 **Correspondência:** Se os símbolos coincidirem, as cartas permanecem viradas. Se não, elas são viradas novamente.
-  4.5 **Número de Jogadas:** Você tem apenas 10 jogadas, então escolha sabiamente!
+    1. **Escolha uma Carta:** Clique em uma carta para virá-la.
+    2. **Memorize:** Memorize os símbolos das cartas viradas.
+    3. **Escolha Outra Carta:** Clique em outra carta para tentar encontrar seu par correspondente.
+    4. **Correspondência:** Se os símbolos coincidirem, as cartas permanecem viradas. Se não, elas são viradas novamente.
+    5. **Número de Jogadas:** Você tem apenas 10 jogadas, então escolha sabiamente!
 
 5. Fim do Jogo
-  5.1 O jogo termina quando todos os pares de cartas são encontrados ou quando você atinge o limite de 10 jogadas.
+    1. O jogo termina quando todos os pares de cartas são encontrados ou quando você atinge o limite de 10 jogadas.
   
-  5.2 Uma mensagem final será exibida com seu nome, desempenho e pontuação.
+    2. Uma mensagem final será exibida com seu nome, desempenho e pontuação.
 
 6. Reiniciar o Jogo
-  6.1 Se desejar jogar novamente, clique no botão "Jogar Novamente" no final do jogo.
+    1. Se desejar jogar novamente, clique no botão "Jogar Novamente" no final do jogo.
 
 
 
